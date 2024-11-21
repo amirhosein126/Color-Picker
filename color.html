@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="notification" id="notification">
+        <img src="./icon/cross-svgrepo-com.svg" alt="close" id="closeNotification">
+        <div class="g">
+            <span id="notificationMessage">پیام نمایش داده می‌شود</span>
+        </div>
+    </div>
+    
+   
+    <div class="center">
+        <div class="mov">
+            <h1>پالت رنگ</h1>
+
+            <p class="flex">
+                شفافیت: <input type="range" id="opacitySlider" min="0" max="1" step="0.01" value="1">
+                <span id="opacityValue">1.00</span>
+                <input type="color" id="colorPicker" value="#ff0000">
+            </p>
+
+            <div class="color-box" id="colorBox"></div>
+            <div class="color-info">
+                <p>HEX: <span id="hexValue">#ff0000</span></p>
+                <p>RGB: <span id="rgbValue">Rgb(255, 0, 0)</span>
+                    <button class="icon-copy sizer" data-value="rgbValue" id="copyRgb"><img
+                            src="./icon/clipboard-text-alt-svgrepo-com.svg" alt=""></button>
+                </p>
+                <p>HSL: <span id="hslValue">Hsl(0, 100%, 50%)</span>
+                    <button class="icon-copy sizer" data-value="hslValue" id="copyHsl"><img
+                            src="./icon/clipboard-text-alt-svgrepo-com.svg" alt=""></button>
+                </p>
+                <p>opacity: <span id="rgbaValue">Rgba(255, 0, 0, 1.00)</span>
+                    <button class="icon-copy sizer" data-value="rgbaValue" id="copyRgba"><img
+                            src="./icon/clipboard-text-alt-svgrepo-com.svg" alt=""></button>
+                </p>
+            </div>
+            <div class="just">
+                <div class="justanc">
+                    <button id="copyHex"> کپی کد <span>HEX</span></button>
+                    <button id="saveColor">ذخیره رنگ</button>
+                </div>
+                <h3 class="h3-color">رنگ‌های ذخیره‌شده:</h3>
+                <div class="saved-colors" id="savedColors"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./color.js"></script>
+</body>
+</html>
